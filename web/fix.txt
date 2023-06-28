@@ -1,0 +1,14 @@
+def make_start_plan_non_degenerate(x: np.ndarray) -> None:
+    m, n = x.shape
+
+    i, j = 0, 0
+    while i < m - 1 and j < n - 1:
+        if x[i][j + 1] == 0.0:
+            if x[i + 1][j] == 0.0:
+                x[i + 1][j] = np.nan
+                i += 1
+                j += 1
+            else:
+                i += 1
+        else:
+            j +=1

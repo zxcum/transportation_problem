@@ -1,0 +1,31 @@
+     style: [
+        {
+          selector: 'node',
+          style: {
+            'background-color': '#006699',
+            'label': 'data(id)'
+          }
+        },
+        {
+          selector: 'edge',
+          style: {
+            'width': 3,
+            'line-color': '#ccc',
+            'target-arrow-color': '#ccc',
+            'target-arrow-shape': 'triangle',
+            'label': 'data(label)',
+            'text-wrap': 'wrap',
+            'text-max-width': '100px',
+            'text-valign': 'center',
+            'text-margin-x': '20px'
+          }
+        }
+      ],
+
+      layout: {
+        name: 'grid',
+        rows: 2,
+	cols: 3,
+      }
+    });
+  </script>

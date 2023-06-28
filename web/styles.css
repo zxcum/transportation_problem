@@ -1,0 +1,235 @@
+table {
+  border-collapse: collapse;
+    margin: auto;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 40px;
+    padding-bottom: 40 px;
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#table-container {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-right: 10px;
+}
+.header{
+    min-height: 200 px;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header_1{
+    min-height:100vh;
+    width: 100%;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(sourses/back1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header_2{
+    min-height:100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(sourses/map.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.name-prog{
+    position: absolute;
+    top: 0.5%;
+    left: 2%;
+    text-align: left;
+    color #BA55D3;
+}
+.text-1{
+    color: #4B0082;
+    font-size: 50px;
+}
+.tex1{
+    padding-left: 40 px;
+}
+
+table {
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+
+
+
+
+
+
+
+
+
+body {
+  background: #E6E6FA;
+}
+.gradient-button {
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'cursive', Comic Sans MS;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #DC143C 0%, #FFFAFA 51%, #DC143C 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
+.nav-text{
+    font-size: 50px;
+}
+/* nav tags */
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 140px;
+    
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    line-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #BA55D3;
+    text-decoration: none;
+    font-size: 26px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 5px;
+    background: #8A2BE2;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+    
+}
+.nav-links  ul li:hover::after{
+    width: 100%;
+}
+
+
+.gradient-button {
+  text-decoration: none;
+  display: inline-block;
+  color: #000000;
+  padding: 20px 30px;
+  margin: 10px 20px;
+  border-radius: 10px;
+  font-family: 'cursive', Comic Sans MS;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-image: linear-gradient(to right, #DC143C 0%, #FFFAFA 51%, #DC143C 100%);
+  background-size: 200% auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, .1);
+  transition: .5s;
+}
+.gradient-button:hover {
+  background-position: right center;
+}
+.nav-text{
+    font-size: 50px;
+}
+.sliding-button {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  position: relative;
+  padding: 15px 30px;
+    border-radius: 45px;
+  margin: 40px 75px;
+    position: relative;
+    align-items: center;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  overflow: hidden;
+  letter-spacing: 2px;
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 0;
+  width: 100%;
+  z-index: -1;
+  color: white;
+  background: linear-gradient(180deg, #EE82EE, #DDA0DD, #D8BFD8, #d50082);
+  transition: .8s cubic-bezier(.165, .84, .44, 1);
+}
+.sliding-button:hover {
+  background: rgba(255, 255, 255, 0);
+}
+.sliding-button:hover:before {
+  bottom: 0%;
+  top: auto;
+  height: 100%;
+}
+}
+body {
+  background: url(https://html5book.ru/wp-content/uploads/2015/07/background39.png);
+}
+.floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #524f4e;
+  background: white;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+.floating-button:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, .4);
+  color: white;
+  transform: translateY(-7px);
+}

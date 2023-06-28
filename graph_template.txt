@@ -1,0 +1,57 @@
+
+    // Создание SVG-контейнера
+    const svg = d3.select("svg");
+
+    // Создание силовой симуляции
+    const simulation = d3.forceSimulation(nodes)
+      .force("link", d3.forceLink(links).id(d => d.id).distance(200))
+      .force("charge", d3.forceManyBody().strength(-300))
+      .force("radial", d3.forceRadial(100, 250, 250))
+
+    // Создание линий
+    const link = svg.selectAll("line")
+      .data(links)
+      .enter()
+      .append("line")
+      .style("stroke", "#ccc")
+      .style("stroke-width", 4);
+
+    // Создание надписей для ребер
+    const linkLabel = svg.selectAll(".link-label")
+      .data(links)
+      .enter()
+      .append("text")
+      .attr("class", "link-label")
+      .attr("text-anchor", "middle")
+      .text(d => d.label);
+
+    // Создание узлов
+    const node = svg.selectAll("g")
+      .data(nodes)
+      .enter()
+      .append("g");
+
+    // Добавление кругов к узлам
+    node.append("circle")
+      .attr("r", 10)
+      .style("fill", "blue");
+
+    // Добавление надписей к узлам
+    node.append("text")
+      .attr("dx", 12)
+      .attr("dy", 4)
+      .text(d => d.name);
+
+    // Обновление позиций узлов, линий и надписей при изменении симуляции
+    simulation.on("tick", () => {
+      link.attr("x1", d => d.source.x)
+          .attr("y1", d => d.source.y)
+          .attr("x2", d => d.target.x)
+          .attr("y2", d => d.target.y);
+
+      linkLabel.attr("x", d => (d.source.x + d.target.x) / 2)
+               .attr("y", d => (d.source.y + d.target.y) / 2);
+
+      node.attr("transform", d => `translate(${d.x},${d.y})`);
+    });
+  </script>
